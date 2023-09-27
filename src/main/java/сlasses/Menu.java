@@ -1,4 +1,4 @@
-package Classes;
+package сlasses;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -33,8 +33,8 @@ public class Menu {
         while(true){
             if(scanner.hasNextDouble()){
                 double price = scanner.nextDouble();
-                if (price < 0){
-                    System.out.println("Введено отрицательное значение, повторите ввод.");
+                if (price <= 0){
+                    System.out.println("Введено отрицательное или нулевое значение, повторите ввод.");
                     scanner = new Scanner(System.in);
                 } else {
                     return price;

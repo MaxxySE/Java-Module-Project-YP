@@ -1,4 +1,4 @@
-package Classes;
+package сlasses;
 
 public class DoubleFormatter {
     public static String formatDouble(double num){

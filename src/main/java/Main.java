@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import Classes.Menu;
+import сlasses.Menu;
 
 public class Main {
 
@@ -14,27 +14,19 @@ public class Main {
     }
 
     private static void getAmountOfPeople(){
-
         while (true){
             if (scanner.hasNextInt()) {
                 people = scanner.nextInt();
-                checkAmountOfPeople(people);
-                break;
+                if (people > 1){
+                    menu.setMenu(people);
+                    break;
+                } else {
+                    System.out.println("Людей, между которыми делится счет, должно быть больше 1, повторите ввод.");
+                }
             } else {
                 System.out.println("Введено неверное значение, повторите ввод.");
                 scanner = new Scanner(System.in);
             }
         }
     }
-
-    private static void checkAmountOfPeople(int people){
-        if (people <= 1) {
-            System.out.println("Людей, между которыми делится счет, должно быть больше 1, повторите ввод.");
-            getAmountOfPeople();
-        } else {
-            menu.setMenu(people);
-        }
-    }
-
-
 }
